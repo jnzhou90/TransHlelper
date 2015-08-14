@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:paddingBottom="2dp"
+    android:background="#3990CD"
+    tools:context="com.ibm.transhlelper.ChatActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_weight="0.1">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.5"
+           android:textSize="16sp"
+           android:text="actorLeft对话内容"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.5"
+           android:textSize="16sp"
+           android:gravity="right"
+           android:text="actorRight对话内容"/>
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linlayoutchat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/conversation_bubble_left_bg"
+        android:layout_weight="0.4">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp">
+            <TextView
+                android:id="@+id/txtprimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World English !"
+                android:textSize="16dp"/>
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:background="@mipmap/edit"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txttranslate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="40sp"
+                android:text="actror的说的话反应的内容要大字体"
+                android:textStyle="bold"
+                android:drawableRight="@mipmap/trans_speaker_normal"/>
+        <!--    <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/trans_speaker_normal"/>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/actor"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/imgbtnrecorderleft"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/noti_search_speaker_normal" />
+                <ImageButton
+                    android:id="@+id/imgbtntxtleft"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/edit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/edittxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="请输入的你的要翻译的内容"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/imgbtnrecorderright"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/noti_search_speaker_normal" />
+                <ImageButton
+                    android:id="@+id/imgbtntxtright"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/edit"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/actor"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
